@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product App</title>
+    <!-- CDN BOOTSTRAP TEMA ALTERADO -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a href="#" class="navbar-brand">Product App</a>
+    </nav>
+
+    <div class="container">
+        <!-- APLICACION -->
+        <div id="app" class="row pt-5">
+            <!-- Formulario Interfaz1 -->
+            <div class="col-md-4">
+                <!-- Formulario en si -->
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Add a product</h4>
+                    </div>
+                    <form id="product-form" class="card-body">
+                        <!-- Product Name -->
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Product Name" class="form-control">
+                        </div>
+                        <!-- Product Price -->
+                        <div class="form-group">
+                            <input type="number" id="price" step="0.01" placeholder="Product Price" class="form-control">
+                        </div>
+                        <!-- Year Product -->
+                        <div class="form-group">
+                            <input type="number" id="year" min="1900" max="2100" value="2018" placeholder="Year Product" class="form-control">
+                        </div>
+                        <!-- Boton -->
+                        <input type="submit" value="Save" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <!-- Mostrar resto -->
+                <div id="product-list" class="col-md-8"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
